@@ -38,6 +38,7 @@ export class BitcoinInvoiceComponent implements OnChanges, OnDestroy {
   }
 
   watchInvoice(): void {
+    this.paymentErrorMessage = '';
     if (this.paymentStatusSubscription) {
       this.paymentStatusSubscription.unsubscribe();
     }
